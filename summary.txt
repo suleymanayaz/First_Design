@@ -1,0 +1,16 @@
+SUMMARY
+Particle swarm optimization is a population-based stochastic optimization technique that 
+is easy to implement and has been successfully applied in many areas. 
+However, its performance often deteriorates as the dimensionality of the problem increases.
+Recently, parallel strategies based on multiple swarms (multi-swarm) have been investigated 
+as an alternative to overcome this problem. In this paper, we evaluate
+the impact of the topology on multi-swarm systems, considering that swarms are independent,
+and interact by means of particle migration. We focus on asynchronous communication, that is, 
+only when an improvement occurs on the best particle that the solution migrates among swarms.
+The goal is to check how different communication strategies affect the parallel execution of 
+the optimization tasks. Several different topologies and communication strategies have been evaluated,
+including broadcast and gossip on fully connected networks, unidirectional and bidirectional rings,
+hypercubes, and a dynamic topology. Extensive experimental results were obtained and are reported 
+using several traditional benchmark functions. We evaluated the impact of the topologies in terms of 
+the number of iterations and the communication overhead. With the results, a ranking of the different 
+topologies is presented. The impact of the number of swarms on the optimization process is also evaluated.
