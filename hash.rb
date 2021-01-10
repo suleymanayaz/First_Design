@@ -1,10 +1,10 @@
-metin = File.read("summary.txt")                                                                                                                                                                                                                                                                        
+readText = File.read("summary.txt")                                                                                                                                                                                                                                                                        
 # Don't forget to give file path File.read("C:\Users\........\summary.txt")
-a = {}
-metin.split.each do |kelime|
-    kelime.delete!".,)("
-    kelime.downcase!
-    a[kelime]= 0 unless a.key?"#{kelime}"
-    a[kelime] +=1 
+wordsHash = Hash.new
+readText.split.each do |vocable|
+    vocable.delete!".,)("
+    vocable.downcase!
+    wordsHash[vocable]= 0 unless wordsHash.key?"#{vocable}"
+    wordsHash[vocable] +=1 
 end
-p a
+p wordsHash
